@@ -10,7 +10,7 @@ if arr[0] == arr[1]: # 가장 큰 수가 2개 이상일 경우
   count = m
   result = arr[0] * count
   print(result) # 최종 답안 출력
-else: # 반대일 경우
+else: # 반대 경우
   count = int(m / (k + 1)) * k + int(m % (k + 1)) # k + 1 크기의 수열 
   result = count * arr[0] # 가장 큰 수의 갯수
   result += (m - count) * arr[1] # 두 번째 큰 수의 갯수
