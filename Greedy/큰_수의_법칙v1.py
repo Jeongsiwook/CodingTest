@@ -16,7 +16,7 @@ while(m > 0):
     continue
 
   # 두 번째로 큰 수가 첫 번째 수와 같은 지 확인
-  if arr[0] == arr[1]: # 같은 경우 
+  if arr[0] == arr[1]: # 두 수가 같은 경우 
     for _ in range(k):
       result += arr[1]
       m -= 1
