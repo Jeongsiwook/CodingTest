@@ -30,3 +30,30 @@ for start in range(n - 1):
   index += 1
 
 print(count)
+
+
+"""
+from sys import stdin
+
+# 갯수, 리스트, 특정 값 입력 받음
+n = int(input())
+data = list(map(int, stdin.readline().split()))
+x = int(input())
+data.sort()
+
+# 결과, 두 쌍의 합계, index 값
+start, end = 0, n - 1
+count = 0
+while start < end:
+  interval_sum = data[start] + data[end]
+  if interval_sum > x:
+    end -= 1
+  elif interval_sum < x:
+    start += 1
+  else:
+    count += 1
+    start += 1
+    end -= 1    
+
+print(count)
+"""
