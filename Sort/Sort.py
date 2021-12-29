@@ -25,7 +25,6 @@ for i in range(1, length):
 
 # 퀵 정렬
 array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
-length = len(array)
 
 def quick_sort(array, start, end):
   if start >= end:
@@ -33,24 +32,21 @@ def quick_sort(array, start, end):
   pivot = start
   left = start + 1
   right = end
+  
   while left <= right:
-    # 조건을 반대로 하면 왜 안돼? 진짜 XX XXXX
-    while array[left] <= array[pivot] and left <= end:
+    while left <= end and array[left] <= array[pivot]:
       left += 1
-
-    while array[right] >= array[pivot] and start < right:
+    while right > start and array[right] >= array[pivot]:
       right -= 1
-
     if left > right:
-      array[pivot], array[right] = array[right], array[pivot]  
+      array[right], array[pivot] = array[pivot], array[right]
     else:
       array[left], array[right] = array[right], array[left]
-
+      
   quick_sort(array, start, right - 1)
   quick_sort(array, right + 1, end)
 
-quick_sort(array, 0, length - 1)
-print(array)
+quick_sort(array, 0, len(array) - 1)
 
 
 ##
