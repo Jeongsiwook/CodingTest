@@ -34,6 +34,7 @@ if min_count == 9999999:
 else:
   print(min_count) 
   
+  
 """
 from sys import stdin
 
